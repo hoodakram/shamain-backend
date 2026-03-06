@@ -25,8 +25,8 @@ mongoose.connect(process.env.MONGO_URI)
 app.use("/api/products", productRoutes);
 app.use("/uploads", express.static("uploads"));
 
-app.listen(process.env.PORT, () =>
-  console.log(`Server running on port ${process.env.PORT}`)
-);
+
 console.log("Cloud Name:", process.env.CLOUDINARY_CLOUD_NAME);
 console.log("API Key:", process.env.CLOUDINARY_API_KEY);
+
+export default app;
