@@ -14,7 +14,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
-app.options('*', cors()); // handle preflight requests
+app.use(cors());// handle preflight requests
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
