@@ -1,12 +1,17 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
-const db = async () => {
+let isConnected = false;
+
+const connectDB = async () => {
+  if (isConnected) return;
+  
   try {
-    await mongoose.connect("mongodb+srv://hood:hood016@cluster0.vyjg3xo.mongodb.net/shamain");
+    await mongoose.connect(process.env.MONGO_URI);
+    isConnected = true;
     console.log("MongoDB Connected");
-  } catch (error) {
-    console.log("MongoDB Connection Error:", error.message || JSON.stringify(error));
+  } catch (err) {
+    console.log("MongoDB Error:", err.message);
   }
-}
+};
 
-module.exports = db;
+export default connectDB;
