@@ -1,0 +1,20 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://shamain.store/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://shamain.store/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://shamain.store/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://shamain.store/products.html</loc>
+  </url>
+
+</urlset>
